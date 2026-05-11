@@ -85,7 +85,7 @@ enum E_ENEX
     Text3D:intExit
 }
 
-static const interiors[][E_ENEX] = {
+static interiors[][E_ENEX] = {
     {6, 3934.790283, -1232.615600, 1002.025573, 0, 3937.608886, -1232.439208, 10.492897}, // Type 1, Target 14
     {6, 3830.150146, -1559.090820, 1005.401489, 0, 3829.733886, -1557.256713, 10.073801}, // Type 1, Target 15
     {6, 3830.150146, -1559.090820, 1005.401489, 0, 5024.732421, -2309.478027, 8.920621}, // Type 1, Target 15
@@ -115,7 +115,7 @@ static const interiors[][E_ENEX] = {
 };
 
 	
-public OnPlayerKeyStateChange(playerid, newkeys, oldkeys) {
+public OnPlayerKeyStateChange(playerid, KEY:newkeys, KEY:oldkeys) {
 
     if(newkeys & KEY_FIRE) {
         for(new i = 0, k = sizeof(interiors); i < k; i++) {
